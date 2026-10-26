@@ -1,0 +1,15 @@
+method: Quantile matching
+method description: Custom distribution-consistency fitting with h(y)=y^gamma. It aligns luminance quantiles after exposure normalization, derives f(x)=x^(1/gamma), and does not estimate per-pixel irradiance.
+HDR merge method: Threshold-replacement merge: start with the longest exposure, replace near-saturated pixels with exposure-scaled shorter images, and continue replacement while the shorter measurement remains above the threshold.
+input files: IMG_3044.JPG, IMG_3045.JPG, IMG_3046.JPG, IMG_3047.JPG, IMG_3048.JPG, IMG_3049.JPG
+exposure times [s]: 0.1, 0.05, 0.025, 0.0125, 0.00625, 0.003125
+requested shared pixels: 50000
+valid sample count: 299410
+estimated gamma: 1.21558685
+estimated camera transformation: y = f(x) = x^(1/gamma) = x^0.82264793
+inverse response used for linearization: x = f^(-1)(y) = h(y) = y^gamma = y^1.21558685
+quantile log-domain mismatch RMSE: 0.34559424
+response curve CSV: outputs/imaging/response/ind_jpg_quantile_response_curve.csv
+response curve plot: outputs/imaging/response/ind_jpg_quantile_response_curve.png
+diagnostic plot: outputs/imaging/response/ind_jpg_quantile_diagnostic.png
+HDR result: outputs/imaging/response/ind_jpg_quantile_hdr_result.jpg

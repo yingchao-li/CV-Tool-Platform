@@ -1,0 +1,15 @@
+method: Gamma exposure consistency
+method description: Custom one-parameter exposure-consistency fitting. The fitted inverse response is h(y)=y^gamma and the camera transformation is f(x)=x^(1/gamma); no free-form response or per-pixel irradiance variables are solved.
+HDR merge method: Threshold-replacement merge: start with the longest exposure, replace near-saturated pixels with exposure-scaled shorter images, and continue replacement while the shorter measurement remains above the threshold.
+input files: IMG_3044.JPG, IMG_3045.JPG, IMG_3046.JPG, IMG_3047.JPG, IMG_3048.JPG, IMG_3049.JPG
+exposure times [s]: 0.1, 0.05, 0.025, 0.0125, 0.00625, 0.003125
+requested shared pixels: 50000
+valid sample count: 299410
+estimated gamma: 1.55373139
+estimated camera transformation: y = f(x) = x^(1/gamma) = x^0.64361189
+inverse response used for linearization: x = f^(-1)(y) = h(y) = y^gamma = y^1.55373139
+weighted relative consistency RMSE: 0.20659199
+response curve CSV: outputs/imaging/response/ind_jpg_gamma_response_curve.csv
+response curve plot: outputs/imaging/response/ind_jpg_gamma_response_curve.png
+diagnostic plot: outputs/imaging/response/ind_jpg_gamma_diagnostic.png
+HDR result: outputs/imaging/response/ind_jpg_gamma_hdr_result.jpg

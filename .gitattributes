@@ -1,0 +1,6 @@
+# Large binary assets: use Git LFS if you choose to commit them.
+data/raw/**/*.CR3 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.npy filter=lfs diff=lfs merge=lfs -text
+data/faces/*.onnx filter=lfs diff=lfs merge=lfs -text
+data/faces/*.pkl filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text
